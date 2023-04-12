@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(42, 165, 63);
+            color: whitesmoke;
+        }
+        select {
+            background-color: blue;
+            color: whitesmoke;
+        }
+        button {
+            background-color: yellow;
+            color: rgb(20, 32, 204);
+        }
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Selecione seu país de origem :
+    <select id="txtdrop">
+        <option value="">Selecione</option>
+    </select>
+    <button onclick="verificar()">Verificar</button>
+    <div id="res"></div>
+    
+    <script>
+         fetch('https://restcountries.com/v3.1/all')
+        .then(response => response.json())
+        .then(data => {
+            // adiciona uma opção para cada país na lista
+            const select = document.getElementById('txtdrop');
+            data.forEach(country => {
+                const option = document.createElement('option');
+                option.value = country.name.common;
+                option.text = country.name.common;
+                select.appendChild(option);
+            });
+        });
+        
+        function verificar() {
+            var txtpais = document.querySelector('select#txtdrop').value
+            var res = document.getElementById('res')
+            console.log(txtpais)
+
+        if (txtpais == 'Brazil') {
+            res.innerHTML = `Salve meu compatriota`
+        } else {
+            res.innerHTML = `Salve, meu parceiro do ${txtpais}`
+        }
+    }
+        
+    </script>
+</body>
+</html>
