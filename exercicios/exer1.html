@@ -5,78 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 1</title>
-    <style>
-        body {
-            background-color: rgb(229, 231, 103);
-        }
-
-        div#main {
-            background-color: rgba(141, 73, 230, 0.795);
-            width: 500px;
-            height: 500px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto;
-            margin-top: 100px;
-            border-radius: 30%;
-        }
-        
-        img#foto{
-            opacity: 70%;
-        }
-
-        h1{
-            margin-bottom: -10px;
-            font-size: 3em;
-        }
-
-        h1, h2 {
-            justify-content: center;
-            display: flex;
-            align-items: center;
-            font-family: fantasy;
-            color: rgb(104, 72, 77);
-        }
-
-
-
-        .img-wrapper {
-            position: relative;
-            display: inline-block;
-        }
-
-        .img-wrapper #hora-atual {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 5em;
-            color: rgb(229, 231, 103);
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-
-    </style>
+    <link rel="stylesheet" href="exer1.css">
+    <script src="exer1.js"></script>
 </head>
 <body>
     <div id="main">
         <div class="container">
             <div class="img-wrapper">
-                <img src="/Curso em video/exercicios/img/tumblr_inline_ojdi5owLIY1r5gzmv_540.png" id="foto">
+                <img id="foto" src="img/manha.jpg">
                 <div id="hora-atual"></div>
             </div>
         </div>
     </div>
-
-    <script>
-        function mostrarHora() {
-            var horaAtual = new Date();
-            var hora = horaAtual.getHours();
-            var minutos = horaAtual.getMinutes();
-            var horaFormatada = `${hora}:${minutos}`;
-            document.getElementById("hora-atual").innerHTML = horaFormatada;
-        }
-        setInterval(mostrarHora, 1000)
-    </script>
 </body>
 </html>
