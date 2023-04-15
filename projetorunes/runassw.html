@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+</head>
+<style>
+    body {
+        color: rgb(218, 204, 167);
+        font-size: larger;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-align: center;
+        background-image: url('maxresdefault.jpg'); 
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    select#runeselect {
+        background-color: rgb(24, 13, 6);
+        color: rgb(218, 204, 167);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font: bold;
+        font-family: fantasy;
+        font-stretch: extra-expanded;
+        width: 75px;
+        height: 30px;
+    }
+
+    input#calc {
+        background-color: rgb(124, 57, 30);
+        color: rgb(218, 204, 167);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: x-large;
+        border-style: none;
+        margin-bottom: 15px;
+        box-shadow: rgb(0, 6, 12);
+    }
+
+    input#roll {
+        background-color: rgb(124, 57, 30);
+        color: rgb(218, 204, 167);
+        border-style: none;
+        width: 71px;
+        height: 30px;
+        margin-bottom: 75px;
+    }
+</style>
+<body>
+    <h1>Calculadora de eficiencia de runa</h1>
+    
+    <select id="runeselect">
+        <option value="opt1"> RES </option>
+    </select>
+    <select id="runeselect">
+        <option value="opt1"> ATQ% </option>
+    </select>
+    <select id="runeselect">
+        <option value="opt1"> DEF% </option>
+    </select>
+    <select id="runeselect">
+        <option value="opt1"> VEL </option>
+    </select>
+    
+    <div>
+        <select id="runeselect">
+            <option value="opt1"> Violent </option>
+            <option value="opt2"> Swift </option>
+            <option value="opt3"> Despair </option>
+            <option value="opt4"> Will </option>
+        </select>
+        <input id="roll" type="number" name="txtn1" id="txtn1">
+        <input id="roll" type="number" name="txtn2" id="txtn2">
+        <input id="roll" type="number" name="txtn3" id="txtn3">
+        <input id="roll" type="number" name="txtn4" id="txtn4">
+        <select id="runeselect">
+            <option value="opt1"> 6</option>
+        </select>
+    </div>
+
+    <input id="calc" type="button" value="Calcular" onclick="somar()">
+    
+    <div id="res">Nota da runa : </div>
+
+    <script>
+        
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.querySelector('input#txt2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1)
+            var n2 = Number(tn2)
+            var s = n1 + n2
+            res.innerHTML = `A soma é : ${s}`
+        }
+    </script>
+    
+</body>
+</html>
