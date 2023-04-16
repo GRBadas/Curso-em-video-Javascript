@@ -1,0 +1,43 @@
+body {
+    color: rgb(218, 204, 167);
+    font-size: larger;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    background-image: url('maxresdefault.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+select {
+    background-color: rgb(24, 13, 6);
+    color: rgb(218, 204, 167);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font: bold;
+    font-family: fantasy;
+    font-stretch: extra-expanded;
+    width: 75px;
+    height: 30px;
+}
+
+input#calc {
+    background-color: rgb(124, 57, 30);
+    color: rgb(218, 204, 167);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+    border-style: none;
+    margin-bottom: 15px;
+    box-shadow: rgb(0, 6, 12);
+}
+
+input#roll {
+    background-color: rgb(124, 57, 30);
+    color: rgb(218, 204, 167);
+    border-style: none;
+    width: 71px;
+    height: 30px;
+    margin-bottom: 75px;
+}
+
+option:first {
+    color: #999;
+}
