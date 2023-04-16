@@ -71,4 +71,23 @@ function desabilitarOpcao(select, valor) {
       });
     }
   };
+
+  function desabilitarOpcaoImpar(select, valor) {
+    var options = select.options;
+    for (var i = 0; i < options.length; i++) {
+      if (options[i].value == valor) {
+        options[i].disabled = true;
+        break;
+      }
+    }
+    if (valor == "1" || valor == "3" || valor == "5") {
+      var opcoesIndesejadas = ["HP%", "RES", "DEF%", "ATQ%", "ACC", "SPD"];
+      for (var i = 0; i < options.length; i++) {
+        if (opcoesIndesejadas.includes(options[i].value)) {
+          options[i].disabled = true;
+        }
+      }
+    }
+  }
+  
   

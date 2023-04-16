@@ -13,6 +13,16 @@
     <h1>Calculadora de eficiencia de runa</h1>
     
     <div id="">
+
+        <select id="runeselect" required class="drop">
+            <option value="" disabled selected hidden>-Slot-</option>
+            <option value="1"> Slot 1</option>
+            <option value="2"> Slot 2</option>
+            <option value="3"> Slot 3</option>
+            <option value="4"> Slot 4</option>
+            <option value="5"> Slot 5</option>
+            <option value="6"> Slot 6</option>
+        </select>
         
         <select id="select1" required class="select">
             <option value="" disabled selected hidden>-Prop 1-</option>
@@ -123,15 +133,7 @@
         <input id="roll" type="number" name="txtn3" id="txtn3">
         <input id="roll" type="number" name="txtn4" id="txtn4">
 
-        <select id="runeselect" required class="drop">
-            <option value="" disabled selected hidden>-Slot-</option>
-            <option value="1"> 1</option>
-            <option value="2"> 2</option>
-            <option value="3"> 3</option>
-            <option value="4"> 4</option>
-            <option value="5"> 5</option>
-            <option value="6"> 6</option>
-        </select>
+        
     </div>
 
     <input id="calc" type="button" value="Calcular" onclick="somar()">
